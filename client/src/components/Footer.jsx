@@ -11,36 +11,34 @@ const Footer = () => {
       <Divider />
       <Container maxWidth="lg">
         <Box
-          sx={{
+          style={{
             display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: 'center',
+            flexDirection: 'row',
+						alignItems: 'center',
             justifyContent: 'space-between',
-            py: 4,
+						marginTop: '5px',
           }}
         >
-          <Stack direction="row" spacing={3}>
-            <Link color="text.secondary" href="#" underline="none" variant="body2">
-              <IconButton aria-label="Calendar">
-								<FaCalendarDay />
-							</IconButton>
-						</Link>
-            <Link color="text.secondary" href="self-check" underline="none" variant="body2">
-              <IconButton aria-label="Self Check">
-								<FaHeartbeat />
-							</IconButton>
-						</Link>
-            <Link color="text.secondary" href="resources" underline="none" variant="body2">
-              <IconButton aria-label="Resources">
-								<FaBook />
-							</IconButton>
-            </Link>
-            <Link color="text.secondary" href="profile" underline="none" variant="body2">
-              <IconButton aria-label="Profile">
-								<FaUserCircle />
-							</IconButton>
-            </Link>
-          </Stack>
+					<Link color="text.secondary" href="#" underline="none" variant="body2">
+						<IconButton aria-label="Calendar">
+							<FaCalendarDay />
+						</IconButton>
+					</Link>
+					<Link color="text.secondary" href="self-check" underline="none" variant="body2">
+						<IconButton aria-label="Self Check">
+							<FaHeartbeat />
+						</IconButton>
+					</Link>
+					<Link color="text.secondary" href="resources" underline="none" variant="body2">
+						<IconButton aria-label="Resources">
+							<FaBook />
+						</IconButton>
+					</Link>
+					<Link color="text.secondary" href="profile" underline="none" variant="body2">
+						<IconButton aria-label="Profile">
+							<FaUserCircle />
+						</IconButton>
+					</Link>
         </Box>
       </Container>
     </Box>

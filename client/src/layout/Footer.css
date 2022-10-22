@@ -1,0 +1,7 @@
+.footer {
+  background-color: var(--primary-color);
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}

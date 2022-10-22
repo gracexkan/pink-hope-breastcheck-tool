@@ -1,5 +1,6 @@
 import React from "react"
 import CalTracker from './CalTracker';
+import './CalForm.css'
 
 export default function Form() {
   const [formData, setFormData] = React.useState(
@@ -20,7 +21,7 @@ export default function Form() {
   return (
     <div style={{width: "100%", padding: "30px"}}>
       <form style={{width: "100%", padding: "10px"}}>
-        <fieldset>
+        <fieldset className="calendar-fieldset">
           <legend>Select a tracker</legend>
           
           <input 
@@ -31,7 +32,7 @@ export default function Form() {
               checked={formData.logger === "period"}
               onChange={handleChange}
           />
-          <label htmlFor="period">Period Tracker</label>
+          <label htmlFor="period"> &nbsp; Period Tracker</label>
           <br />
           
           <input 
@@ -42,7 +43,7 @@ export default function Form() {
               checked={formData.logger === "self-check"}
               onChange={handleChange}
           />
-          <label htmlFor="self-check">Self-Check Tracker</label>
+          <label htmlFor="self-check">  &nbsp; Self-Check Tracker</label>
           <br />
         </fieldset>
       </form>

@@ -19,10 +19,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const CalTracker = () => {
+const CalTracker = ({isPeriodLogs}) => {
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)
-  let [isPeriodLogs, setIsPeriodLogs] = useState(true)
   let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
   let [periodLogs, setPeriodLogs] = useState([])
   let [selfCheckLogs, setSelfCheckLogs] = useState([])
@@ -34,6 +33,12 @@ const CalTracker = () => {
         setPeriodLogs(prev => [...prev, selectedDay]);
       } else {
         setPeriodLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
+      }
+    } else {
+      if (selfCheckLogs.filter(e => e.toString() == selectedDay.toString()).length <= 0) {
+        setSelfCheckLogs(prev => [...prev, selectedDay]);
+      } else {
+        setSelfCheckLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
       }
     }
   }, [selectedDay])

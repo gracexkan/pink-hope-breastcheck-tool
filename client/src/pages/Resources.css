@@ -1,0 +1,22 @@
+.resources-page {
+  text-align: center;
+  background: #f1cfd5;
+  margin-bottom: 15px;
+}
+
+.resources-page h2 {
+  padding-top: 15px;
+  margin-bottom: -15px;
+  color: #73313b;
+}
+
+.resources-links {
+  display: block;
+  padding: 8px;
+  margin: 15vw auto;
+  border-radius: 12px;
+  width: 60vw;
+  color: #f1cfd5;
+  background-color: #73313b;
+  text-decoration: none;
+}

@@ -5,6 +5,7 @@ import Calendar from './pages/Calendar';
 import SelfCheck from './pages/SelfCheck';
 import Resources from './pages/Resources';
 import Profile from './pages/Profile';
+import Faqs from './pages/Faqs';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import axios from "axios";
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/" element={<Calendar />}></Route>
           <Route exact path="/self-check" element={<SelfCheck />}></Route>
           <Route exact path="/resources" element={<Resources />}></Route>
+          <Route exact path="/resources/faqs" element={<Faqs />}></Route>
           <Route exact path="/profile" element={<Profile />}></Route>
         </Routes>
       </div>

@@ -16,7 +16,7 @@ const Footer = () => {
             flexDirection: 'row',
 						alignItems: 'center',
             justifyContent: 'space-between',
-						marginTop: '5px',
+						marginTop: '10px',
 						width: '100%'
           }}
         >

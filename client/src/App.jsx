@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import './App.css';
 
 import Calendar from './pages/Calendar';
 import SelfCheck from './pages/SelfCheck';

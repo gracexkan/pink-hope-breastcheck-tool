@@ -61,12 +61,9 @@ const CalTracker = ({isPeriodLogs}) => {
   return (
     <div className="w-full">
       <div>
-        <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
+        <div className="md:grid md:grid-cols-2 md:divide-x  md:divide-gray-200 mt-3 bg-white">
           <div className="md:pr-14">
             <div className="flex items-center">
-              <h2 className="flex-auto font-semibold text-gray-900">
-                {format(firstDayCurrentMonth, 'MMMM yyyy')}
-              </h2>
               <button
                 type="button"
                 onClick={previousMonth}
@@ -75,6 +72,9 @@ const CalTracker = ({isPeriodLogs}) => {
                 <span className="sr-only">Previous month</span>
                 <ChevronLeftIcon className="w-5 h-5" aria-hidden="true" />
               </button>
+              <h2 className="flex-auto font-semibold text-[#73313b] text-2xl">
+                {format(firstDayCurrentMonth, 'MMMM yyyy')}
+              </h2>
               <button
                 onClick={nextMonth}
                 type="button"
@@ -84,7 +84,7 @@ const CalTracker = ({isPeriodLogs}) => {
                 <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
-            <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center text-gray-500">
+            <div className="grid grid-cols-7 mt-5 text-xs leading-6 text-center text-gray-500 bg-[#f4e8de]">
               <div>S</div>
               <div>M</div>
               <div>T</div>
@@ -99,7 +99,7 @@ const CalTracker = ({isPeriodLogs}) => {
                   key={day.toString()}
                   className={classNames(
                     dayIdx === 0 && colStartClasses[getDay(day)],
-                    'py-1.5'
+                    'py-0.5'
                   )}
                 >
                   <button

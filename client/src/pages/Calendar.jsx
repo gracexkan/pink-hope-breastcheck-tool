@@ -4,7 +4,7 @@ import 'react-calendar/dist/Calendar.css';
   
 const Calendar = () => {
   return (
-    <div 
+    <div className="calendar-page"
       style={{
         display: 'flex',
         flexDirection: 'column',

@@ -1,0 +1,27 @@
+.notification {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 12vw;
+  height: 12vw;
+  cursor: pointer;
+}
+
+.notification-bell {
+  border: 1px solid red;
+  margin: auto;
+  padding: 8px;
+  border-radius: 50%
+}
+
+.notification-count {
+  border: 1px solid red;
+  position: absolute;
+  text-align: center;
+  right: -15px;
+  top: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}

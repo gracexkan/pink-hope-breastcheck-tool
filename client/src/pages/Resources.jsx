@@ -8,6 +8,7 @@ const Resources = (props) => {
   const [latitude, setLatitude] = useState('')
   const [longitude, setLongitude] = useState('')
 
+  // set the state for lat long
   function getPosition(pos) {
     const crd = pos.coords;
 
@@ -16,6 +17,7 @@ const Resources = (props) => {
     
   }
 
+  // load the browser geolocation.getcurrent position
   useEffect(() => {
     if (navigator.geolocation){
       navigator.geolocation.getCurrentPosition(getPosition)

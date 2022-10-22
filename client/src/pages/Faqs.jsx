@@ -4,7 +4,7 @@ function Faqs(){
 
   return (
     <div>
-      FAQs
+      FAQs here
     </div>
   )
 

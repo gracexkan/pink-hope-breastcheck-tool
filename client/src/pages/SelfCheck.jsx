@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+
+import BreastCheck from "../components/breastcheck/BreastCheck";
 
 const SelfCheck = () => {
   return (
-    <p>This is the self check page</p>
+    <div>
+      <BreastCheck />
+    </div>
   );
-}
+};
 
 export default SelfCheck;

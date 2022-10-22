@@ -1,0 +1,24 @@
+.breastcheck {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+}
+
+.button {
+	background-color: #f8dbd2; 
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+  }
+
+.symptoms__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+	max-width: 90%;
+	text-align: center;
+}
+
+

@@ -34,7 +34,7 @@ function App() {
           <Route exact path="/profile" element={<Profile />}></Route>
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

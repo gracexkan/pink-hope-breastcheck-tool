@@ -10,7 +10,6 @@ import BCStep3 from "./BCStep3";
 import BCResources from "./BreastCheckResources";
 import BCDate from "./BCDate";
 import BCFinish from "./BCFinish";
-import BCAccordian from "./BCAccordian";
 
 function BreastCheck() {
   const { Panel } = Collapse;
@@ -25,7 +24,6 @@ function BreastCheck() {
         }}
       >
         <BCDate />
-        <BCAccordian />
         <Collapse
           bordered={false}
           defaultActiveKey={["1"]}

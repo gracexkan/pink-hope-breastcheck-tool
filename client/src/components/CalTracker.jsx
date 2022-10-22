@@ -22,16 +22,19 @@ function classNames(...classes) {
 const CalTracker = () => {
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)
+  let [isPeriodLogs, setIsPeriodLogs] = useState(true)
   let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
   let [periodLogs, setPeriodLogs] = useState([])
   let [selfCheckLogs, setSelfCheckLogs] = useState([])
   let firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date())
 
   useEffect(() => {
-    if (periodLogs.filter(e => e.toString() == selectedDay.toString()).length <= 0) {
-      setPeriodLogs(prev => [...prev, selectedDay]);
-    } else {
-      setPeriodLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
+    if (isPeriodLogs) {
+      if (periodLogs.filter(e => e.toString() == selectedDay.toString()).length <= 0) {
+        setPeriodLogs(prev => [...prev, selectedDay]);
+      } else {
+        setPeriodLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
+      }
     }
   }, [selectedDay])
 

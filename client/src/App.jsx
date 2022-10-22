@@ -10,7 +10,7 @@ import Header from './layout/Header';
 import Footer from './layout/Footer';
 import axios from "axios";
 import Notification from "./components/notification/Notification"
-import Notifications from "./pages/Notifications"
+import Notifications from "./components/notification/Notifications"
 
 function App() {
   useEffect(() => {
@@ -31,7 +31,6 @@ function App() {
           <Route exact path="/resources" element={<Resources />}></Route>
           <Route exact path="/resources/faqs" element={<Faqs />}></Route>
           <Route exact path="/profile" element={<Profile />}></Route>
-          <Route exact path="/notifications" element={<Notifications />}></Route>
         </Routes>
       </div>
       <Footer/>

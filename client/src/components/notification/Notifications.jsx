@@ -1,6 +1,7 @@
 // Import the react-swipe-to-delete-component
 import "./swipe.css";
 import SwipeToDelete from "react-swipe-to-delete-component";
+import { Button } from '@mui/material';
 
 const data = [
   { id: 1, text: "notif 1", date: "5.03.2016" },
@@ -17,8 +18,7 @@ const DeleteIcon = () => (
 const notifications = data.map((item) => (
   <SwipeToDelete key={item.id} background={DeleteIcon}>
     <a className="list-group-item">
-      <h4 className="list-group-item-heading">{item.date}</h4>
-      <p className="list-group-item-text">{item.text}</p>
+      <p className="list-group-item-text text-sm text-gray-500">{item.text}</p>
     </a>
   </SwipeToDelete>
 ));

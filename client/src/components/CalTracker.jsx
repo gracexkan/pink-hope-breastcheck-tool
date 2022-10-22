@@ -27,7 +27,11 @@ export default function Example() {
   let firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date())
 
   useEffect(() => {
-    setPeriodLogs(prev => [...prev, { "startDatetime": selectedDay, "endDatetime": selectedDay }]);
+    if (periodLogs.filter(e => e.toString() == selectedDay.toString()).length <= 0) {
+      setPeriodLogs(prev => [...prev, selectedDay]);
+    } else {
+      setPeriodLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
+    }
   }, [selectedDay])
 
   console.log(periodLogs)
@@ -124,7 +128,7 @@ export default function Example() {
 
                   <div className="w-1 h-1 mx-auto mt-1">
                     {periodLogs.some((meeting) =>
-                      isSameDay(meeting.startDatetime, day)
+                      isSameDay(meeting, day)
                     ) && (
                       <div className="w-1 h-1 rounded-full bg-sky-500"></div>
                     )}

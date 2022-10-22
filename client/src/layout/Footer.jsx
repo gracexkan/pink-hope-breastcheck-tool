@@ -2,13 +2,14 @@ import React from 'react'
 
 import { Box, Container, Divider, IconButton, Link, Stack, Typography } from '@mui/material';
 import { FaCalendarDay, FaHeartbeat, FaUserCircle, FaBook } from "react-icons/fa";
+import './Footer.css'
 
 const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <Box component="footer" sx={{ marginTop: 'auto' }}>
-      <Divider />
+    <Box className="footer" component="footer" sx={{ marginTop: 'auto' }}>
+      <Divider className="footer" />
       <Container maxWidth="lg">
         <Box
           style={{

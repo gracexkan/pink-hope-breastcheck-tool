@@ -61,7 +61,7 @@ const CalTracker = ({isPeriodLogs}) => {
   return (
     <div className="w-full">
       <div>
-        <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
+        <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200 border border-red-500">
           <div className="md:pr-14">
             <div className="flex items-center">
               <h2 className="flex-auto font-semibold text-gray-900">

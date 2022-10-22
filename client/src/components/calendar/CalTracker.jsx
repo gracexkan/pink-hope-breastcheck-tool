@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import {
   add,
   eachDayOfInterval,
@@ -12,50 +12,60 @@ import {
   parse,
   parseISO,
   startOfToday,
-} from 'date-fns'
-import { useState, useEffect } from 'react'
+} from "date-fns";
+import { useState, useEffect } from "react";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
-const CalTracker = ({isPeriodLogs}) => {
-  let today = startOfToday()
-  let [selectedDay, setSelectedDay] = useState(today)
-  let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
-  let [periodLogs, setPeriodLogs] = useState([])
-  let [selfCheckLogs, setSelfCheckLogs] = useState([])
-  let firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date())
+const CalTracker = ({ isPeriodLogs }) => {
+  let today = startOfToday();
+  let [selectedDay, setSelectedDay] = useState(today);
+  let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
+  let [periodLogs, setPeriodLogs] = useState([]);
+  let [selfCheckLogs, setSelfCheckLogs] = useState([]);
+  let firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
 
   useEffect(() => {
     if (isPeriodLogs) {
-      if (periodLogs.filter(e => e.toString() == selectedDay.toString()).length <= 0) {
-        setPeriodLogs(prev => [...prev, selectedDay]);
+      if (
+        periodLogs.filter((e) => e.toString() == selectedDay.toString())
+          .length <= 0
+      ) {
+        setPeriodLogs((prev) => [...prev, selectedDay]);
       } else {
-        setPeriodLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
+        setPeriodLogs((prev) =>
+          prev.filter((e) => e.toString() != selectedDay.toString())
+        );
       }
     } else {
-      if (selfCheckLogs.filter(e => e.toString() == selectedDay.toString()).length <= 0) {
-        setSelfCheckLogs(prev => [...prev, selectedDay]);
+      if (
+        selfCheckLogs.filter((e) => e.toString() == selectedDay.toString())
+          .length <= 0
+      ) {
+        setSelfCheckLogs((prev) => [...prev, selectedDay]);
       } else {
-        setSelfCheckLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
+        setSelfCheckLogs((prev) =>
+          prev.filter((e) => e.toString() != selectedDay.toString())
+        );
       }
     }
-  }, [selectedDay])
+  }, [selectedDay]);
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
     end: endOfMonth(firstDayCurrentMonth),
-  })
+  });
 
   function previousMonth() {
-    let firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 })
-    setCurrentMonth(format(firstDayNextMonth, 'MMM-yyyy'))
+    let firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 });
+    setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
   function nextMonth() {
-    let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 })
-    setCurrentMonth(format(firstDayNextMonth, 'MMM-yyyy'))
+    let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
+    setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
   return (
@@ -65,7 +75,7 @@ const CalTracker = ({isPeriodLogs}) => {
           <div className="md:pr-14">
             <div className="flex items-center">
               <h2 className="flex-auto font-semibold text-gray-900">
-                {format(firstDayCurrentMonth, 'MMMM yyyy')}
+                {format(firstDayCurrentMonth, "MMMM yyyy")}
               </h2>
               <button
                 type="button"
@@ -99,44 +109,42 @@ const CalTracker = ({isPeriodLogs}) => {
                   key={day.toString()}
                   className={classNames(
                     dayIdx === 0 && colStartClasses[getDay(day)],
-                    'py-1.5'
+                    "py-1.5"
                   )}
                 >
                   <button
                     type="button"
                     onClick={() => setSelectedDay(day)}
                     className={classNames(
-                      isEqual(day, selectedDay) && 'text-white',
+                      isEqual(day, selectedDay) && "text-white",
                       !isEqual(day, selectedDay) &&
                         isToday(day) &&
-                        'text-red-500',
+                        "text-red-500",
                       !isEqual(day, selectedDay) &&
                         !isToday(day) &&
                         isSameMonth(day, firstDayCurrentMonth) &&
-                        'text-gray-900',
+                        "text-gray-900",
                       !isEqual(day, selectedDay) &&
                         !isToday(day) &&
                         !isSameMonth(day, firstDayCurrentMonth) &&
-                        'text-gray-400',
-                      isEqual(day, selectedDay) && isToday(day) && 'bg-red-500',
+                        "text-gray-400",
+                      isEqual(day, selectedDay) && isToday(day) && "bg-red-500",
                       isEqual(day, selectedDay) &&
                         !isToday(day) &&
-                        'bg-gray-900',
-                      !isEqual(day, selectedDay) && 'hover:bg-gray-200',
+                        "bg-gray-900",
+                      !isEqual(day, selectedDay) && "hover:bg-gray-200",
                       (isEqual(day, selectedDay) || isToday(day)) &&
-                        'font-semibold',
-                      'mx-auto flex h-8 w-8 items-center justify-center rounded-full'
+                        "font-semibold",
+                      "mx-auto flex h-8 w-8 items-center justify-center rounded-full"
                     )}
                   >
-                    <time dateTime={format(day, 'yyyy-MM-dd')}>
-                      {format(day, 'd')}
+                    <time dateTime={format(day, "yyyy-MM-dd")}>
+                      {format(day, "d")}
                     </time>
                   </button>
 
                   <div className="w-1 h-1 mx-auto mt-1">
-                    {periodLogs.some((meeting) =>
-                      isSameDay(meeting, day)
-                    ) && (
+                    {periodLogs.some((meeting) => isSameDay(meeting, day)) && (
                       <div className="w-1 h-1 rounded-full bg-sky-500"></div>
                     )}
                   </div>
@@ -154,17 +162,17 @@ const CalTracker = ({isPeriodLogs}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 let colStartClasses = [
-  '',
-  'col-start-2',
-  'col-start-3',
-  'col-start-4',
-  'col-start-5',
-  'col-start-6',
-  'col-start-7',
-]
+  "",
+  "col-start-2",
+  "col-start-3",
+  "col-start-4",
+  "col-start-5",
+  "col-start-6",
+  "col-start-7",
+];
 
 export default CalTracker;

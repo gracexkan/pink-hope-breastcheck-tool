@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
-import Calendar from './pages/Calendar';
-import SelfCheck from './pages/SelfCheck';
-import Resources from './pages/Resources';
-import Profile from './pages/Profile';
-import Header from './layout/Header';
-import Footer from './layout/Footer';
+import Calendar from "./pages/Calendar";
+import SelfCheck from "./pages/SelfCheck";
+import Resources from "./pages/Resources";
+import Profile from "./pages/Profile";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 import axios from "axios";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Header />
+        <Header />
         <Routes>
           <Route exact path="/" element={<Calendar />}></Route>
           <Route exact path="/self-check" element={<SelfCheck />}></Route>
@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/profile" element={<Profile />}></Route>
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

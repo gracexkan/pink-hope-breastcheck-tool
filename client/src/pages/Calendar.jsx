@@ -1,5 +1,5 @@
 import React from 'react';
-import CalForm from '../components/CalForm';
+import CalForm from '../components/calendar/CalForm';
 import 'react-calendar/dist/Calendar.css';
   
 const Calendar = () => {

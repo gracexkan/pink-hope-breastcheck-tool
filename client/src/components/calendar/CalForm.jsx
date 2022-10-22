@@ -1,5 +1,5 @@
 import React from "react"
-import CalTracker from './CalTracker';
+import CalTracker from "./CalTracker"
 
 export default function Form() {
   const [formData, setFormData] = React.useState(

@@ -17,6 +17,7 @@ const Footer = () => {
 						alignItems: 'center',
             justifyContent: 'space-between',
 						marginTop: '5px',
+						width: '100%'
           }}
         >
 					<Link color="text.secondary" href="#" underline="none" variant="body2">

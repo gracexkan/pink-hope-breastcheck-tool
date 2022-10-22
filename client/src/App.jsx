@@ -8,8 +8,8 @@ import Profile from './pages/Profile';
 import Faqs from './pages/Faqs';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
-import Notification from './layout/Notification';
 import axios from "axios";
+import Notification from "./components/notification/Notification"
 
 function App() {
   useEffect(() => {
@@ -22,8 +22,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Header />
-      <Notification />
+        <Header />
+        <Notification />
         <Routes>
           <Route exact path="/" element={<Calendar />}></Route>
           <Route exact path="/self-check" element={<SelfCheck />}></Route>

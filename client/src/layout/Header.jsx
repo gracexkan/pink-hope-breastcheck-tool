@@ -1,10 +1,10 @@
 
 import React from 'react';
-  
+
 const Header = () => {
   return (
-    <div>
-      This is the header
+    <div style={{height: "10%"}}>
+      this is a header
     </div>
   );
 }

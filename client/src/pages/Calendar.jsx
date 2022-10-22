@@ -1,10 +1,10 @@
 import React from 'react';
-import CalTracker from '../components/CalTracker';
+import CalForm from '../components/CalForm';
 import 'react-calendar/dist/Calendar.css';
   
 const Calendar = () => {
   return (
-    <div 
+    <div className="calendar-page"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -15,7 +15,7 @@ const Calendar = () => {
         width: '100%'
       }}
     >
-      <CalTracker />
+      <CalForm />
     </div>
   );
 }

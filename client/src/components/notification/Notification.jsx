@@ -7,7 +7,7 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 import Notifications from "./Notifications"
 
 const Notification = () => {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
     setIsOpen(false)

@@ -1,17 +1,18 @@
 import React from 'react'
 import './Notification.css';
-import { AiOutlineBell } from "react-icons/ai";
+import { FaBell } from "react-icons/fa";
+import { Box, Container, Divider, IconButton, Link, Stack, Typography } from '@mui/material';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
-function Notification(){
-
-
-
-
+const Notification = () => {
   return (
-    <div className="notification">
-      <AiOutlineBell className="notification-bell" size={35}/>
-      <span className="notification-count">5</span>
+    <div className="notification-box">
+      <IconButton>
+        <div className="notification">
+          <FaBell size={35} />
+        <span className="notification-count">5</span>
+        </div>
+      </IconButton>
     </div>
   )
 

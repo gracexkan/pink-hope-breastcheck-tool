@@ -4,8 +4,6 @@ import { Box, Container, Divider, IconButton, Link, Stack, Typography } from '@m
 import { FaCalendarDay, FaHeartbeat, FaUserCircle, FaBook } from "react-icons/fa";
 
 const Footer = () => {
-  const year = new Date().getFullYear()
-
   return (
     <Box component="footer" sx={{ marginTop: 'auto' }}>
       <Divider />

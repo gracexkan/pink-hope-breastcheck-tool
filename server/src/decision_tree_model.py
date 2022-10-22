@@ -85,35 +85,41 @@ models = model(x_train, y_train)
 
 # Decided to use decision tree
 # Example of patient with benign cancer
-# data = {
-#     'radius_mean': [7.76],
-#     'smoothness_mean': [0.05263],
-#     'concave points_mean': [0.0],
-#     'symmetry_mean': [0.1587],
-#     'radius_se': [0.3857],
-#     'concave points_se': [0.007],
-#     'smoothness_se': [0.007],
-#     'symmetry_se': [0.02],
-# }
-
-# Example of patient with malignant cancer
-data = { 
-    'radius_mean': [21.56],
-    'smoothness_mean': [0.111],
-    'concave points_mean': [0.13890],
-    'symmetry_mean': [0.1726],
-    'radius_se': [0.01],
-    'concave points_se': [0.02],
-    'smoothness_se': [0.01],
-    'symmetry_se': [0.03],
+data = {
+    'radius_mean': [7.76],
+    'smoothness_mean': [0.05263],
+    'concave_points_mean': [0.0],
+    'symmetry_mean': [0.1587],
+    'radius_se': [0.3857],
+    'concave_points_se': [0.007],
+    'smoothness_se': [0.007],
+    'symmetry_se': [0.02],
 }
 
+# Example of patient with malignant cancer
+# data = { 
+#     'radius_mean': [21.56],
+#     'smoothness_mean': [0.111],
+#     'concave_points_mean': [0.13890],
+#     'symmetry_mean': [0.1726],
+#     'radius_se': [0.01],
+#     'concave_points_se': [0.02],
+#     'smoothness_se': [0.01],
+#     'symmetry_se': [0.03],
+# }
 
-# Cleaning up to fit the model
-data = pd.DataFrame(data)
-data = data.iloc[:, 0:8].values
-data = sc.transform(data)
+# # Example 
+# data = pd.DataFrame(data)
+# data = data.iloc[:, 0:8].values
+# data = sc.transform(data)
 
-print(models[2].predict(data))
+# # return {'probability' : models[2].predict_proba(data)}
+
+def predict(data):
+    data = pd.DataFrame(data)
+    data = data.iloc[:, 0:8].values
+    data = sc.transform(data)
+    return {'should_get_checked' : models[2].predict(data).tolist()[0]}
 
 
+print(predict(data))

@@ -20,7 +20,7 @@ const Footer = () => {
 						width: '100%'
           }}
         >
-					<Link color="text.secondary" href="#" underline="none" variant="body2">
+					<Link color="text.secondary" href="/" underline="none" variant="body2">
 						<IconButton aria-label="Calendar">
 							<FaCalendarDay />
 						</IconButton>

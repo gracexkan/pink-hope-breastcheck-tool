@@ -19,11 +19,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+const CalTracker = () => {
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)
   let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
   let [periodLogs, setPeriodLogs] = useState([])
+  let [selfCheckLogs, setSelfCheckLogs] = useState([])
   let firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date())
 
   useEffect(() => {
@@ -33,8 +34,6 @@ export default function Example() {
       setPeriodLogs(prev => prev.filter(e => e.toString() != selectedDay.toString()));
     }
   }, [selectedDay])
-
-  console.log(periodLogs)
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
@@ -133,6 +132,13 @@ export default function Example() {
                       <div className="w-1 h-1 rounded-full bg-sky-500"></div>
                     )}
                   </div>
+                  <div className="w-1 h-1 mx-auto mt-1">
+                    {selfCheckLogs.some((meeting) =>
+                      isSameDay(meeting, day)
+                    ) && (
+                      <div className="w-1 h-1 rounded-full bg-pink-500"></div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -152,3 +158,5 @@ let colStartClasses = [
   'col-start-6',
   'col-start-7',
 ]
+
+export default CalTracker;

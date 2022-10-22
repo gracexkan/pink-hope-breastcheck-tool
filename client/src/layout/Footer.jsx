@@ -16,11 +16,11 @@ const Footer = () => {
             flexDirection: 'row',
 						alignItems: 'center',
             justifyContent: 'space-between',
-						marginTop: '5px',
+						marginTop: '10px',
 						width: '100%'
           }}
         >
-					<Link color="text.secondary" href="#" underline="none" variant="body2">
+					<Link color="text.secondary" href="/" underline="none" variant="body2">
 						<IconButton aria-label="Calendar">
 							<FaCalendarDay />
 						</IconButton>

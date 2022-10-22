@@ -3,22 +3,17 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import './Resources.css';
 
 
-
-
 const Resources = (props) => {
 
   const [latitude, setLatitude] = useState('')
   const [longitude, setLongitude] = useState('')
 
-  
   function getPosition(pos) {
     const crd = pos.coords;
 
     setLatitude( crd.latitude )
     setLongitude( crd.longitude )
     
-    console.log(latitude)
-    console.log(longitude)
   }
 
   useEffect(() => {
@@ -31,7 +26,6 @@ const Resources = (props) => {
   }, [])
 
   // const handleClick = () => {
-
   //   if (navigator.geolocation){
   //   navigator.geolocation.getCurrentPosition(getPosition)
 

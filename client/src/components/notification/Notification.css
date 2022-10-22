@@ -1,0 +1,33 @@
+.notification-box {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.notification {
+  margin-right: 15px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.notification-bell {
+  border: 1px solid red;
+  margin: auto;
+  padding: 8px;
+  border-radius: 50%
+}
+
+.notification-count {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}

@@ -2,13 +2,12 @@ import React from 'react'
 
 import { Box, Container, Divider, IconButton, Link, Stack, Typography } from '@mui/material';
 import { FaCalendarDay, FaHeartbeat, FaUserCircle, FaBook } from "react-icons/fa";
+import './Footer.css'
 
 const Footer = () => {
-  const year = new Date().getFullYear()
-
   return (
-    <Box component="footer" sx={{ marginTop: 'auto' }}>
-      <Divider />
+    <Box className="footer" component="footer" sx={{ marginTop: 'auto' }}>
+      <Divider className="footer" />
       <Container maxWidth="lg">
         <Box
           style={{
@@ -22,22 +21,22 @@ const Footer = () => {
         >
 					<Link color="text.secondary" href="/" underline="none" variant="body2">
 						<IconButton aria-label="Calendar">
-							<FaCalendarDay />
+							<FaCalendarDay color="#73313b"/>
 						</IconButton>
 					</Link>
 					<Link color="text.secondary" href="self-check" underline="none" variant="body2">
 						<IconButton aria-label="Self Check">
-							<FaHeartbeat />
+							<FaHeartbeat color="#73313b"/>
 						</IconButton>
 					</Link>
 					<Link color="text.secondary" href="resources" underline="none" variant="body2">
 						<IconButton aria-label="Resources">
-							<FaBook />
+							<FaBook	color="#73313b" />
 						</IconButton>
 					</Link>
 					<Link color="text.secondary" href="profile" underline="none" variant="body2">
 						<IconButton aria-label="Profile">
-							<FaUserCircle />
+							<FaUserCircle color="#73313b"/>
 						</IconButton>
 					</Link>
         </Box>

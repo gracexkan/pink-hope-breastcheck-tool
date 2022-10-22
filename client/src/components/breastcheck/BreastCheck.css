@@ -2,10 +2,11 @@
 	width: 70%;
 	margin: 0 auto;
 	display: flex;
+	padding-top: 30px;
 }
 
 .button {
-	background-color: #f8dbd2; 
+	background-color: var(--color-lightpink);
 	border: none;
 	border-radius: 50%;
 	display: inline-block;
@@ -17,7 +18,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 1rem;
-	max-width: 90%;
+	max-width: 100%;
 	text-align: center;
 }
 

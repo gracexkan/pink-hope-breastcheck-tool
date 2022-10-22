@@ -23,6 +23,7 @@ function BreastCheck() {
           display: "flex",
         }}
       >
+        <h1 font="Poppins">Breast Self Check</h1>
         <BCDate />
         <Collapse
           bordered={false}

@@ -23,22 +23,22 @@ const Footer = () => {
         >
 					<Link color="text.secondary" href="/" underline="none" variant="body2">
 						<IconButton aria-label="Calendar">
-							<FaCalendarDay />
+							<FaCalendarDay color="#73313b"/>
 						</IconButton>
 					</Link>
 					<Link color="text.secondary" href="self-check" underline="none" variant="body2">
 						<IconButton aria-label="Self Check">
-							<FaHeartbeat />
+							<FaHeartbeat color="#73313b"/>
 						</IconButton>
 					</Link>
 					<Link color="text.secondary" href="resources" underline="none" variant="body2">
 						<IconButton aria-label="Resources">
-							<FaBook />
+							<FaBook	color="#73313b" />
 						</IconButton>
 					</Link>
 					<Link color="text.secondary" href="profile" underline="none" variant="body2">
 						<IconButton aria-label="Profile">
-							<FaUserCircle />
+							<FaUserCircle color="#73313b"/>
 						</IconButton>
 					</Link>
         </Box>

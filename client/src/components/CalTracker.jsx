@@ -13,30 +13,7 @@ import {
   parseISO,
   startOfToday,
 } from 'date-fns'
-import { useState } from 'react'
-
-const periodLogs = [
-  {
-    startDatetime: '2022-05-11T13:00',
-    endDatetime: '2022-05-11T14:30',
-  },
-  {
-    startDatetime: '2022-05-20T09:00',
-    endDatetime: '2022-05-20T11:30',
-  },
-  {
-    startDatetime: '2022-05-20T17:00',
-    endDatetime: '2022-05-20T18:30',
-  },
-  {
-    startDatetime: '2022-06-09T13:00',
-    endDatetime: '2022-06-09T14:30',
-  },
-  {
-    startDatetime: '2022-05-13T14:00',
-    endDatetime: '2022-05-13T14:30',
-  },
-]
+import { useState, useEffect } from 'react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -46,7 +23,14 @@ export default function Example() {
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)
   let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
+  let [periodLogs, setPeriodLogs] = useState([])
   let firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date())
+
+  useEffect(() => {
+    setPeriodLogs(prev => [...prev, { "startDatetime": selectedDay, "endDatetime": selectedDay }]);
+  }, [selectedDay])
+
+  console.log(periodLogs)
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
@@ -63,13 +47,9 @@ export default function Example() {
     setCurrentMonth(format(firstDayNextMonth, 'MMM-yyyy'))
   }
 
-  let selectedDayMeetings = periodLogs.filter((meeting) =>
-    isSameDay(parseISO(meeting.startDatetime), selectedDay)
-  )
-
   return (
-    <div className="pt-16 w-full">
-      <div className="max-w-md px-4 mx-auto sm:px-7 md:max-w-4xl md:px-6">
+    <div className="w-full">
+      <div>
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           <div className="md:pr-14">
             <div className="flex items-center">
@@ -144,7 +124,7 @@ export default function Example() {
 
                   <div className="w-1 h-1 mx-auto mt-1">
                     {periodLogs.some((meeting) =>
-                      isSameDay(parseISO(meeting.startDatetime), day)
+                      isSameDay(meeting.startDatetime, day)
                     ) && (
                       <div className="w-1 h-1 rounded-full bg-sky-500"></div>
                     )}

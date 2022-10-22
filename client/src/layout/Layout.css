@@ -14,11 +14,12 @@
 	top: 0;
 	margin-left: auto;
 	width: 100%;
-	padding: 20px 15px;
+	padding: 30px 15px;
 	font-family: 'Fraunces', serif;
 	z-index: 5;
 	font-weight: 500;
 	font-size: 2rem;
+	height: 6rem;
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 }

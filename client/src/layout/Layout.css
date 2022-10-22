@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap');
+
+.footer {
+  background-color: var(--primary-color);
+  top: 0;
+  width: 100vw;
+  height: 4rem;
+  z-index: 1;
+  position: fixed;
+}
+
+.header {
+	position: fixed;
+	font-family: 'Fraunces', serif;
+	z-index: 3;
+	font-weight: 500;
+	left: 5%;
+	font-size: 2rem;
+	color: var(--secondary-color);
+}

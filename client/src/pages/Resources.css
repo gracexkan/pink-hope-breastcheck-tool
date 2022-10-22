@@ -1,13 +1,11 @@
 .resources-page {
   text-align: center;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
   margin-bottom: 15px;
 }
 
 .resources-page h2 {
   font-family: var(--primary-font);
-  padding-top: 15px;
-  margin-top: 50px;
   font-size: 20pt;
   margin-bottom: -15px;
   color: var(--secondary-color);
@@ -16,14 +14,18 @@
 
 .resources-links {
   display: block;
-  padding: 8px;
-  margin: 15vw auto;
+  padding: 15px;
+  margin: 10vw auto;
   border-radius: 12px;
-  width: 60vw;
-  color: #f1cfd5;
-  background-color: var(--secondary-color);
+  width: 70%;
+  color: var(--secondary-color);
+  background-color: var(--color-lightpink);
   text-decoration: none;
-  font-family: var(--primary-font);
-  font-weight: 700
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}
 
+.resources-links:hover {
+	background-color: var(--color-pink);
+	color: white;
 }

@@ -16,8 +16,9 @@ export default function Form() {
   };
 
   return (
-    <div style={{ width: "100%", padding: "30px" }}>
-      <form style={{ width: "100%", padding: "10px" }}>
+    <div style={{ width: "100%" }}>
+      <h1>Calendar Tracker</h1>
+      <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
           <legend>Select a tracker</legend>
 

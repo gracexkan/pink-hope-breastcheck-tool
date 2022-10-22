@@ -3,15 +3,29 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+	--primary-color: #f1cfd5;
+	--secondary-color: #73313b;
+	--color-pink: #ff9a9e;
+	--color-lightpink: #f8dbd2;
+	--primary-font: 'Lora', serif;
+	--secondary-font: 'Nanum Gothic', sans-serif;
+
+	--transition: all 400ms ease;
+  }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Poppins'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F1CFD5;
+  /* background: var(--primary-color); */
+  padding-top: 100px;
+  scroll-padding-bottom: 100px;
 }
 
 code {
@@ -19,9 +33,16 @@ code {
     monospace;
 }
 
-:root {
-  --primary-color: #f1cfd5;
-  --secondary-color: #73313b;
-  --primary-font: 'Lora', serif;
-  --secondary-font: 'Nanum Gothic', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
 }
+
+h1 {
+	font-size: 2.5rem;
+	font:"Lora";
+}
+

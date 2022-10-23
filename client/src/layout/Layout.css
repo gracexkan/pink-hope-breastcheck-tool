@@ -2,7 +2,7 @@
 
 .footer {
   background-color: var(--primary-color);
-  top: 0;
+  bottom: 0;
   width: 100vw;
   height: 4rem;
   z-index: 1;
@@ -11,10 +11,15 @@
 
 .header {
 	position: fixed;
+	top: 0;
+	margin-left: auto;
+	width: 100%;
+	padding: 30px 15px;
 	font-family: 'Fraunces', serif;
-	z-index: 3;
+	z-index: 5;
 	font-weight: 500;
-	left: 5%;
 	font-size: 2rem;
+	height: 6rem;
 	color: var(--secondary-color);
+	background-color: var(--primary-color);
 }

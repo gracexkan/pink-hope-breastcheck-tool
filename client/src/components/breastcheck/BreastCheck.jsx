@@ -6,7 +6,6 @@ import "./BreastCheck.css";
 
 import BCStep1 from "./BCStep1";
 import BCStep2 from "./BCStep2";
-import BCStep3 from "./BCStep3";
 import BCResources from "./BreastCheckResources";
 import BCDate from "./BCDate";
 import BCFinish from "./BCFinish";
@@ -48,15 +47,8 @@ function BreastCheck() {
             <BCStep2 />
           </Panel>
           <Panel
-            header="Step 3: Check Around Breast"
-            key="3"
-            className="site-collapse-custom-panel"
-          >
-            <BCStep3 />
-          </Panel>
-          <Panel
             header="Further Instruction Resources"
-            key="4"
+            key="3"
             className="site-collapse-custom-panel"
           >
             <BCResources />

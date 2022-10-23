@@ -16,23 +16,24 @@ import {
   FaBook,
 } from "react-icons/fa";
 import "./Layout.css";
-import Header from "./Header";
 
 const Footer = () => {
   return (
-    <Box className="footer" component="footer" sx={{ marginTop: "auto" }}>
+    <Box
+      className="footer"
+      component="footer"
+      sx={{ marginBottom: "auto", width: "100%" }}
+    >
       <Divider className="footer" />
-      <Container maxWidth="lg">
-        <Header />
+      <Container sx={{ width: "100%" }}>
         <Box
           style={{
             display: "flex",
             flexDirection: "row",
-            left: "50%",
             alignItems: "center",
             justifyContent: "space-between",
             marginTop: "10px",
-            width: "50%",
+            width: "90%",
             position: "relative",
             zIndex: "2",
           }}

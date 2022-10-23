@@ -23,6 +23,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <div className="App">
         <Notification />
         <Routes>

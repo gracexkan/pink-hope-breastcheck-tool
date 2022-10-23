@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap");
 
 .footer {
   background-color: var(--primary-color);
@@ -10,16 +10,16 @@
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	margin-left: auto;
-	width: 100%;
-	padding: 25px 20px 15px;
-	font-family: 'Fraunces', serif;
-	z-index: 5;
-	font-weight: 500;
-	font-size: 2rem;
-	height: 5.5rem;
-	color: var(--secondary-color);
-	background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  margin-left: auto;
+  width: 100%;
+  padding: 25px 20px 15px;
+  font-family: "Fraunces", serif;
+  z-index: 5;
+  font-weight: 500;
+  font-size: 2rem;
+  height: 5.5rem;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }

@@ -12,13 +12,12 @@ import Brightness1OutlinedIcon from "@mui/icons-material/Brightness1Outlined";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import AdjustOutlinedIcon from "@mui/icons-material/AdjustOutlined";
 
-function BCStep2() {
+function BCStep2({ setRadius, setSmoothness, setLumpsLocation, setSymmetry }) {
   const { Title } = Typography;
   const iconStyle = { color: "#73313b", fontSize: 32 };
 
-  const [lumpNo, setLumpNo] = React.useState("");
   const handleChange = (event) => {
-    setLumpNo(event.target.value);
+    setLumpsLocation(event.target.value);
   };
   const BootstrapInput = styled(InputBase)(({ theme }) => ({
     "label + &": {
@@ -128,6 +127,7 @@ function BCStep2() {
             marks
             min={1}
             max={10}
+            onChange={(e) => setSmoothness(() => e.target.value)}
             style={{ color: "#73313b", maxWidth: "70%" }}
           />
         </div>
@@ -142,6 +142,7 @@ function BCStep2() {
             marks
             min={1}
             max={10}
+            onChange={(e) => setSymmetry(() => e.target.value)}
             style={{ color: "#73313b", maxWidth: "70%" }}
           />
         </div>

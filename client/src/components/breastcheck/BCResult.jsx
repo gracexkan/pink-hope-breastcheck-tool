@@ -5,7 +5,7 @@ function BCResult({ onClick }) {
   return (
     <Result
       status="success"
-      title="Your Self Breast Check Has Been Recorded!"
+      title="Your Breast Self Check Has Been Recorded!"
       subTitle="Results:"
       extra={[<a className="close" onClick={onClick} />]}
     />

@@ -54,7 +54,7 @@ function BreastCheck() {
             <BCResources />
           </Panel>
         </Collapse>
-        <BCFinish />
+        {/* <BCFinish /> */}
       </Space>
     </div>
   );

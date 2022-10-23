@@ -4,9 +4,9 @@ import SwipeToDelete from "react-swipe-to-delete-component";
 import { Button } from "@mui/material";
 
 const data = [
-  { id: 1, text: "notif 1", date: "5.03.2016" },
-  { id: 2, text: "notif 2", date: "3.03.2016" },
-  { id: 3, text: "notif 3", date: "1.03.2016" },
+  { id: 1, text: "Your period is predicted to come in 3 days!", date: "5.03.2016" },
+  { id: 2, text: "Please log your breast check today!", date: "1.03.2016" },
+  { id: 3, text: "Your self-breast check date is now overdue.", date: "3.03.2016" },
 ];
 
 const DeleteIcon = () => <>nothing</>;

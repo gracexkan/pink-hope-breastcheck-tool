@@ -34,7 +34,7 @@ const Resources = (props) => {
 
   return (
     <div className="resources-page">
-      <h1>Resources</h1>
+      <h1 style={{fontFamily: "Verdana", fontSize: "30px", color: "#73313b", fontWeight: "bold"}}>Resources</h1>
 
       <div>
         <a

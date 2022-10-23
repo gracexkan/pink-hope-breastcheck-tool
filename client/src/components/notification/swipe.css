@@ -40,7 +40,7 @@
 
 /* Custom styles */
 .swipe-to-delete .js-delete {
-  background: #ff5f58;
+  background: #73313b;
 }
 .swipe-to-delete .js-delete svg {
   position: absolute;
@@ -70,5 +70,4 @@
   background-color: #fff;
   display: block;
   padding: 10px;
-  border: 1px solid #aaa;
 }

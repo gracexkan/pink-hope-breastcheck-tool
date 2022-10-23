@@ -2,14 +2,15 @@
   text-align: center;
   /* background: var(--primary-color); */
   margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 .resources-page h2 {
   font-family: var(--primary-font);
   font-size: 20pt;
-  margin-bottom: -15px;
   color: var(--secondary-color);
-  font-weight:700
+  font-weight:700;
+  margin-bottom: -15px;
 }
 
 .resources-links {

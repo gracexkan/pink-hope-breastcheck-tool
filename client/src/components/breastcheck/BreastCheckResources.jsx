@@ -16,6 +16,7 @@ function BCResources() {
       size="middle"
       style={{
         display: "flex",
+        width: "100%"
       }}
     >
       <Title level={4}>Breast Self Check Article</Title>

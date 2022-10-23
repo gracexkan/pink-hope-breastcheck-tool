@@ -9,7 +9,7 @@ CORS(app)
 @app.route('/api/user/checkup', methods=['POST'])
 def query_ml_model():
     data = request.get_json()
-    
+    print(data)
     return predict(data)
 
 
@@ -20,5 +20,5 @@ def hc():
 
 
 if __name__ == "__main__":
-    app.run(port=3001) 
+    app.run(port=3001, debug=True) 
     # Do not change the port address!

@@ -11,49 +11,81 @@ import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDiss
 import EmojiPeopleOutlinedIcon from "@mui/icons-material/EmojiPeopleOutlined";
 import BCButton from "./BCButton";
 
-function BCStep1() {
+function BCStep1({ setEv }) {
   const iconStyle = { color: "#73313b", fontSize: 32 };
   return (
     <div>
       <div className="symptoms__container">
         <div>
-          <BCButton icon={<OpenInFullOutlinedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<OpenInFullOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.35}
+          />
           <h5>changes in shape and size</h5>
         </div>
         <div>
-          <BCButton icon={<BlurCircularOutlinedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<BlurCircularOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.54}
+          />
           <h5>puckering of skin or nipple</h5>
         </div>
         <div>
           <BCButton
             icon={<SupervisedUserCircleOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.1}
           />
           <h5>rash around nipple</h5>
         </div>
         <div>
-          <BCButton icon={<OpacityRoundedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<OpacityRoundedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.45}
+          />
           <h5>nipple dischange</h5>
         </div>
         <div>
-          <BCButton icon={<BloodtypeOutlinedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<BloodtypeOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.45}
+          />
           <h5>nipple bleeding</h5>
         </div>
         <div>
-          <BCButton icon={<LocalPharmacyOutlinedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<LocalPharmacyOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.1}
+          />
           <h5>skin redness</h5>
         </div>
         <div>
           <BCButton
             icon={<SentimentDissatisfiedOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.2}
           />
           <h5>skin soreness</h5>
         </div>
         <div>
-          <BCButton icon={<FilterListOutlinedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<FilterListOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.2}
+          />
           <h5>accentuated veins</h5>
         </div>
         <div>
-          <BCButton icon={<EmojiPeopleOutlinedIcon style={iconStyle} />} />
+          <BCButton
+            icon={<EmojiPeopleOutlinedIcon style={iconStyle} />}
+            setEv={setEv}
+            weightedEv={0.2}
+          />
           <h5>upper arm swelling</h5>
         </div>
       </div>

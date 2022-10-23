@@ -10,8 +10,6 @@ const Calendar = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: '10px',
-        marginTop: '20px',
         width: '100%'
       }}
     >

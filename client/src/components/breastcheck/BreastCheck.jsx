@@ -12,6 +12,11 @@ import BCFinish from "./BCFinish";
 
 function BreastCheck() {
   const { Panel } = Collapse;
+  const [weightedEV, setWeightedEV] = React.useState(0);
+
+  // let queryDecisionTreeResp = {
+  //   "weightedEv":
+  // }
 
   return (
     <div className="BreastCheck">
@@ -37,7 +42,7 @@ function BreastCheck() {
             key="1"
             className="site-collapse-custom-panel"
           >
-            <BCStep1 />
+            <BCStep1 setEv={setWeightedEV} />
           </Panel>
           <Panel
             header="Step 2: Physical Breast Inspection"

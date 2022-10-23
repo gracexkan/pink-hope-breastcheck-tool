@@ -10,22 +10,23 @@ import BCResources from "./BreastCheckResources";
 import BCDate from "./BCDate";
 import BCFinish from "./BCFinish";
 
-function BreastCheck() {
+function BreastCheck({ mount }) {
   const { Panel } = Collapse;
   const [weightedEV, setWeightedEV] = React.useState(0);
   const [radius, setRadius] = React.useState(0);
   const [smoothness, setSmoothness] = React.useState(0);
   const [lumpsLocation, setLumpsLocation] = React.useState(0);
-
+  const [symm, setSymm] = React.useState(0);
   let queryDecisionTreeResp = {
-    weighted_ev: 0,
-    radius_mean: 0,
-    smoothness_mean: 0,
-    concave_points_mean: 0,
-    symmetry_mean: 0,
-    lumps_location: 0,
+    weighted_ev: weightedEV ? weightedEV : 0,
+    radius_mean: radius,
+    smoothness_mean: smoothness,
+    concave_points_mean: lumpsLocation,
+    symmetry_mean: symm,
+    lumps_location: lumpsLocation,
   };
-
+  console.log(queryDecisionTreeResp);
+  console.log("weightedEV: " + weightedEV);
   return (
     <div className="BreastCheck">
       <Space
@@ -66,7 +67,12 @@ function BreastCheck() {
             key="2"
             className="site-collapse-custom-panel"
           >
-            <BCStep2 />
+            <BCStep2
+              setRadius={setRadius}
+              setSmoothness={setSmoothness}
+              setLumpsLocation={setLumpsLocation}
+              setSymmetry={setSymm}
+            />
           </Panel>
           <Panel
             header="Further Instruction Resources"
@@ -76,7 +82,7 @@ function BreastCheck() {
             <BCResources />
           </Panel>
         </Collapse>
-        <BCFinish />
+        <BCFinish decision={queryDecisionTreeResp} />
       </Space>
     </div>
   );

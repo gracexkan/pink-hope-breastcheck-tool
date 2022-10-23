@@ -1,9 +1,27 @@
 import React, { useState } from "react";
 
-function BCButton(props) {
+function BCButton({ icon, setEv, weightedEv }) {
   const [isActive, setIsActive] = useState(false);
   const handleClick = () => {
     setIsActive((current) => !current);
+
+    setEv((prev) => {
+      if (!isActive) {
+        prev += weightedEv;
+      } else {
+        prev -= weightedEv;
+      }
+
+      if (prev < 0) {
+        prev = 0;
+      }
+      console.log({
+        icon: icon,
+        prev: prev,
+      });
+
+      return prev;
+    });
   };
   const ButtonStyle = {
     backgroundColor: isActive ? "#ff9a9e" : "",
@@ -16,7 +34,7 @@ function BCButton(props) {
       style={ButtonStyle}
       onClick={handleClick}
     >
-      {props.icon}
+      {icon}
     </button>
   );
 }

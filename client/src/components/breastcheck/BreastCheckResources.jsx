@@ -9,9 +9,6 @@ function BCResources() {
     backgroundColor: "#f8dbd2",
     color: "#73313b",
   };
-  const vidStyle = {
-    width: "80vw",
-  };
 
   return (
     <Space
@@ -32,9 +29,9 @@ function BCResources() {
       </Button>
 
       <Title level={4}>Videos</Title>
-      <YouTube videoId="LrfE6JUwIms" style={vidStyle} />
-      <YouTube videoId="A2__iyax54k" style={vidStyle}/>
-      <YouTube videoId="sPfPb9rq1hw" style={vidStyle}/>
+      <YouTube videoId="LrfE6JUwIms" />
+      <YouTube videoId="A2__iyax54k" />
+      <YouTube videoId="sPfPb9rq1hw" />
     </Space>
   );
 }

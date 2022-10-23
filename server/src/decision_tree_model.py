@@ -1,9 +1,10 @@
  
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sb
-import os
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -85,7 +86,7 @@ models = model(x_train, y_train)
 
 # Decided to use decision tree
 # Example of patient with benign cancer
-data = {
+dataEVB = {
     'radius_mean': [7.76],
     'smoothness_mean': [0.05263],
     'concave_points_mean': [0.0],
@@ -97,29 +98,38 @@ data = {
 }
 
 # Example of patient with malignant cancer
-# data = { 
-#     'radius_mean': [21.56],
-#     'smoothness_mean': [0.111],
-#     'concave_points_mean': [0.13890],
-#     'symmetry_mean': [0.1726],
-#     'radius_se': [0.01],
-#     'concave_points_se': [0.02],
-#     'smoothness_se': [0.01],
-#     'symmetry_se': [0.03],
-# }
+dataEVM = { 
+    'radius_mean': [21.56],
+    'smoothness_mean': [0.111],
+    'concave_points_mean': [0.13890],
+    'symmetry_mean': [0.1726],
+    'radius_se': [0.01],
+    'concave_points_se': [0.02],
+    'smoothness_se': [0.01],
+    'symmetry_se': [0.03],
+}
 
-# # Example 
-# data = pd.DataFrame(data)
-# data = data.iloc[:, 0:8].values
-# data = sc.transform(data)
-
-# # return {'probability' : models[2].predict_proba(data)}
 
 def predict(data):
+    print(data)
+    neuralWeights = data['weighted_ev']
+    rad_min = data['radius_mean']
+    sm_min = data['smoothness_mean'] / 100
+    concave_min = data['concave_points_mean']
+    sym_min = data['symmetry_mean'] / 100 
+    lump_loc = data['lumps_location']
+    if concave_min > 2:
+        neuralWeights += 0.2
+    neuralWeights += sm_min + sym_min
+    
+    if neuralWeights > 0.4:
+        data = dataEVM
+    else:
+        data = dataEVB
     data = pd.DataFrame(data)
     data = data.iloc[:, 0:8].values
     data = sc.transform(data)
-    return {'should_get_checked' : models[2].predict(data).tolist()[0]}
+    resp = {'should_get_checked' : models[2].predict(data).tolist()[0]}
+    return resp
 
 
-print(predict(data))

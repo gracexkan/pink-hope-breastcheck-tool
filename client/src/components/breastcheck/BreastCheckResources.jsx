@@ -9,9 +9,6 @@ function BCResources() {
     backgroundColor: "#f8dbd2",
     color: "#73313b",
   };
-  const vidStyle = {
-    height: "10%",
-  };
 
   return (
     <Space
@@ -19,6 +16,7 @@ function BCResources() {
       size="middle"
       style={{
         display: "flex",
+        width: "100%"
       }}
     >
       <Title level={4}>Breast Self Check Article</Title>
@@ -31,7 +29,7 @@ function BCResources() {
       </Button>
 
       <Title level={4}>Videos</Title>
-      <YouTube videoId="LrfE6JUwIms" style={vidStyle} />
+      <YouTube videoId="LrfE6JUwIms" />
       <YouTube videoId="A2__iyax54k" />
       <YouTube videoId="sPfPb9rq1hw" />
     </Space>

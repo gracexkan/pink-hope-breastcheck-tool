@@ -23,9 +23,10 @@ export default function Form() {
         flexDirection: "column",
         alignItems: "center",
         justifyItems: "center",
+        margin: "30px",
       }}
     >
-      <h1>Calendar Tracker</h1>
+      <h1 style={{fontFamily: "Verdana", fontSize: "30px", color: "#73313b", fontWeight: "bold"}}>Calendar Tracker</h1>
       <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
           <legend>Select a tracker</legend>

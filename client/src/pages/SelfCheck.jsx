@@ -4,7 +4,7 @@ import BreastCheck from "../components/breastcheck/BreastCheck";
 
 const SelfCheck = () => {
   return (
-    <div>
+    <div style={{margin: "30px"}}>
       <BreastCheck />
     </div>
   );

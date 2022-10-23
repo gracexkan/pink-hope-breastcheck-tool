@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600&display=swap');
 
 :root {
 	--primary-color: #f1cfd5;
@@ -12,6 +13,7 @@
 	--color-lightpink: #f8dbd2;
 	--primary-font: 'Lora', serif;
 	--secondary-font: 'Nanum Gothic', sans-serif;
+  --header: 'Montserrat', serif;
 
 	--transition: all 400ms ease;
   }
@@ -33,7 +35,14 @@ code {
     monospace;
 }
 
-h1,
+h1 {
+  font-family: "Verdana"; 
+  font-size: 30px;
+  color: #73313b; 
+  font-weight: "bold";
+}
+
+
 h2,
 h3,
 h4,

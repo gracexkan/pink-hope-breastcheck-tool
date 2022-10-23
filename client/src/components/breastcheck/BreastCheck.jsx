@@ -13,10 +13,18 @@ import BCFinish from "./BCFinish";
 function BreastCheck() {
   const { Panel } = Collapse;
   const [weightedEV, setWeightedEV] = React.useState(0);
+  const [radius, setRadius] = React.useState(0);
+  const [smoothness, setSmoothness] = React.useState(0);
+  const [lumpsLocation, setLumpsLocation] = React.useState(0);
 
-  // let queryDecisionTreeResp = {
-  //   "weightedEv":
-  // }
+  let queryDecisionTreeResp = {
+    weighted_ev: 0,
+    radius_mean: 0,
+    smoothness_mean: 0,
+    concave_points_mean: 0,
+    symmetry_mean: 0,
+    lumps_location: 0,
+  };
 
   return (
     <div className="BreastCheck">

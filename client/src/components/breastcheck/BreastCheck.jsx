@@ -27,7 +27,16 @@ function BreastCheck() {
           display: "flex",
         }}
       >
-        <h1 style={{fontFamily: "Verdana", fontSize: "30px", color: "#73313b", fontWeight: "bold"}}>Breast Self Check</h1>
+        <h1
+          style={{
+            fontFamily: "Verdana",
+            fontSize: "30px",
+            color: "#73313b",
+            fontWeight: "bold",
+          }}
+        >
+          Breast Self Check
+        </h1>
         <BCDate />
         <Collapse
           bordered={false}
@@ -59,7 +68,7 @@ function BreastCheck() {
             <BCResources />
           </Panel>
         </Collapse>
-        {/* <BCFinish /> */}
+        <BCFinish />
       </Space>
     </div>
   );

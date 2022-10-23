@@ -1,7 +1,9 @@
 import React from "react";
 import CalTracker from "./CalTracker";
+import { Typography } from "antd";
 
 export default function Form() {
+  const { Title } = Typography;
   const [formData, setFormData] = React.useState({
     logger: "period",
   });
@@ -26,10 +28,19 @@ export default function Form() {
         margin: "30px",
       }}
     >
-      <h1 style={{fontFamily: "Verdana", fontSize: "30px", color: "#73313b", fontWeight: "bold"}}>Calendar Tracker</h1>
+      <h1
+        style={{
+          fontFamily: "Verdana",
+          fontSize: "30px",
+          color: "#73313b",
+          fontWeight: "bold",
+        }}
+      >
+        Calendar Tracker
+      </h1>
       <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
-          <legend>Select a tracker</legend>
+          <Title level={4}>Select Tracker</Title>
 
           <input
             type="radio"
@@ -39,7 +50,7 @@ export default function Form() {
             checked={formData.logger === "period"}
             onChange={handleChange}
           />
-          <label htmlFor="period">Period Tracker</label>
+          <label htmlFor="period"> Period Tracker</label>
           <br />
 
           <input
@@ -50,7 +61,8 @@ export default function Form() {
             checked={formData.logger === "self-check"}
             onChange={handleChange}
           />
-          <label htmlFor="self-check">Self-Check Tracker</label>
+
+          <label htmlFor="self-check"> Self-Check Tracker</label>
           <br />
         </fieldset>
       </form>

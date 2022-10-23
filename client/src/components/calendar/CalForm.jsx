@@ -16,9 +16,17 @@ export default function Form() {
   };
 
   return (
-    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyItems: "center"}}>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyItems: "center",
+      }}
+    >
       <h1>Calendar Tracker</h1>
-      <form style={{ width: "100%", paddingBottom: "30px"}}>
+      <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
           <legend>Select a tracker</legend>
 

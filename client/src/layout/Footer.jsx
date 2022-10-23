@@ -19,9 +19,13 @@ import "./Layout.css";
 
 const Footer = () => {
   return (
-    <Box className="footer" component="footer" sx={{ marginBottom: "auto", width: "100%"}}>
+    <Box
+      className="footer"
+      component="footer"
+      sx={{ marginBottom: "auto", width: "100%" }}
+    >
       <Divider className="footer" />
-      <Container sx={{width: "100%"}}>
+      <Container sx={{ width: "100%" }}>
         <Box
           style={{
             display: "flex",

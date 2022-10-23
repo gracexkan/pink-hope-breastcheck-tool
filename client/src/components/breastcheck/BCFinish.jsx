@@ -1,24 +1,34 @@
 import React, { useState } from "react";
+import { Popover } from "antd";
 import Button from "@mui/material/Button";
-import BCSuccess from "./BCSuccess";
+import BCResult from "./BCResult";
 
 function BCFinish() {
   const buttonStyle = {
     backgroundColor: "#73313b",
     color: "#fff",
   };
-  const [isSuccess, setIsSuccess] = useState(false);
-  const showSuccess = (e) => {
-    setIsSuccess((show) => !show);
+  const [open, setOpen] = useState(false);
+  const hide = () => {
+    setOpen(false);
+  };
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
   };
 
   return (
     <div>
-      <Button variant="contained" style={buttonStyle} onClick={showSuccess}>
-        {"Finish"}
-        show BCSuccess{" "}
-      </Button>
-      <BCSuccess onClose={showSuccess} show={isSuccess} />
+      <Popover
+        content={<BCResult onClick={hide} />}
+        // title="Title"
+        trigger="click"
+        open={open}
+        onOpenChange={handleOpenChange}
+      >
+        <Button variant="contained" style={buttonStyle}>
+          Finish Self Check
+        </Button>
+      </Popover>
     </div>
   );
 }

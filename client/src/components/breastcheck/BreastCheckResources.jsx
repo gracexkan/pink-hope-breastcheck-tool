@@ -10,7 +10,7 @@ function BCResources() {
     color: "#73313b",
   };
   const vidStyle = {
-    height: "10%",
+    width: "80vw",
   };
 
   return (
@@ -19,6 +19,7 @@ function BCResources() {
       size="middle"
       style={{
         display: "flex",
+        width: "100%"
       }}
     >
       <Title level={4}>Breast Self Check Article</Title>
@@ -32,8 +33,8 @@ function BCResources() {
 
       <Title level={4}>Videos</Title>
       <YouTube videoId="LrfE6JUwIms" style={vidStyle} />
-      <YouTube videoId="A2__iyax54k" />
-      <YouTube videoId="sPfPb9rq1hw" />
+      <YouTube videoId="A2__iyax54k" style={vidStyle}/>
+      <YouTube videoId="sPfPb9rq1hw" style={vidStyle}/>
     </Space>
   );
 }

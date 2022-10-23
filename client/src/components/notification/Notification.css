@@ -21,7 +21,7 @@
 .notification-count {
   width: 15px;
   height: 15px;
-  background-color: red;
+  background-color: rgba(223, 29, 29, 0.867);
   border-radius: 50%;
   color: white;
   position: absolute;

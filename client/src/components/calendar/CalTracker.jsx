@@ -137,14 +137,14 @@ const CalTracker = ({isPeriodLogs}) => {
                     {periodLogs.some((meeting) =>
                       isSameDay(meeting, day)
                     ) && (
-                      <div className="w-1 h-1 rounded-full bg-sky-500"></div>
+                      <div className="w-1 h-1 rounded-full bg-pink-500"></div>
                     )}
                   </div>
                   <div className="w-1 h-1 mx-auto mt-1">
                     {selfCheckLogs.some((meeting) =>
                       isSameDay(meeting, day)
                     ) && (
-                      <div className="w-1 h-1 rounded-full bg-pink-500"></div>
+                      <div className="w-1 h-1 rounded-full bg-sky-500"></div>
                     )}
                   </div>
                 </div>

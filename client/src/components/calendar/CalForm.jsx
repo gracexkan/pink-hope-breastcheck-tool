@@ -41,6 +41,7 @@ export default function Form() {
       <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
           <Title level={4}>Select Tracker</Title>
+
           <input
             type="radio"
             id="period"

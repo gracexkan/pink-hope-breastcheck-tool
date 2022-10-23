@@ -43,6 +43,7 @@ export default function Form() {
           <Title level={4}>Select Tracker</Title>
           <div
             style={{
+              display: "flex",
               justifyContent: "center",
             }}
           >

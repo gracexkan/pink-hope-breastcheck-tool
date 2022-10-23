@@ -23,6 +23,7 @@ function App() {
 
   return (
     <Router>
+      <div style={{overflow: "hidden" }}>
       <Header />
       <div className="App">
         <Notification />
@@ -34,7 +35,8 @@ function App() {
           <Route exact path="/profile" element={<Profile />}></Route>
         </Routes>
       </div>
-      <Footer />
+        <Footer />
+      </div>
     </Router>
   );
 }

@@ -17,7 +17,6 @@ function BreastCheck({ mount }) {
   const [smoothness, setSmoothness] = React.useState(0);
   const [lumpsLocation, setLumpsLocation] = React.useState(0);
   const [symm, setSymm] = React.useState(0);
-  console.log(mount);
   let queryDecisionTreeResp = {
     weighted_ev: weightedEV ? weightedEV : 0,
     radius_mean: radius,
@@ -74,7 +73,7 @@ function BreastCheck({ mount }) {
             <BCResources />
           </Panel>
         </Collapse>
-        {/* <BCFinish /> */}
+        <BCFinish decision={queryDecisionTreeResp} />
       </Space>
     </div>
   );

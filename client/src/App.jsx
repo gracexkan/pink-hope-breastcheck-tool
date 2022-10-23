@@ -14,27 +14,20 @@ import Notification from "./components/notification/Notification";
 import Notifications from "./components/notification/Notifications";
 
 function App() {
-  useEffect(() => {
-    async function fetchData() {
-      axios.get("/api/hc").then((res) => console.log(res.data));
-    }
-    fetchData();
-  }, []);
-
   return (
     <Router>
-      <div style={{overflow: "hidden" }}>
-      <Header />
-      <div className="App">
-        <Notification />
-        <Routes>
-          <Route exact path="/" element={<Calendar />}></Route>
-          <Route exact path="/self-check" element={<SelfCheck />}></Route>
-          <Route exact path="/resources" element={<Resources />}></Route>
-          <Route exact path="/resources/faqs" element={<Faqs />}></Route>
-          <Route exact path="/profile" element={<Profile />}></Route>
-        </Routes>
-      </div>
+      <div style={{ overflow: "hidden" }}>
+        <Header />
+        <div className="App">
+          <Notification />
+          <Routes>
+            <Route exact path="/" element={<Calendar />}></Route>
+            <Route exact path="/self-check" element={<SelfCheck />}></Route>
+            <Route exact path="/resources" element={<Resources />}></Route>
+            <Route exact path="/resources/faqs" element={<Faqs />}></Route>
+            <Route exact path="/profile" element={<Profile />}></Route>
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

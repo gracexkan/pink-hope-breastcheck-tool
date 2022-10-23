@@ -9,7 +9,10 @@ function BCDate() {
 
   return (
     <div>
-      <Title level={4}>Select Date</Title>
+      <Title level={4} style={{
+          color: "#73313b",
+          fontWeight: "bold",
+        }}>Select Date</Title>
       <DatePicker onChange={onChange} />
     </div>
   );

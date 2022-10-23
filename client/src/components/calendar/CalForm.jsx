@@ -40,7 +40,10 @@ export default function Form() {
       </h1>
       <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
-          <Title level={4}>Select Tracker</Title>
+          <Title level={4} style={{
+          color: "#73313b",
+          fontWeight: "bold",
+        }}>Select Tracker</Title>
 
           <input
             type="radio"

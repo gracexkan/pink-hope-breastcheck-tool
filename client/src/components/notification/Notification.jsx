@@ -21,7 +21,7 @@ const Notification = () => {
       <Link color="text.secondary" underline="none" variant="body2">
         <IconButton onClick={openModal}>
           <div className="notification">
-            <FaBell size={35} />
+            <FaBell size={35} style={{ color: "#73313b" }} />
           <span className="notification-count">5</span>
           </div>
         </IconButton>

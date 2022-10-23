@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 import datetime
-CLUSTER="mongodb+srv://ray:wip6NCCEDJBXtmS9@cluster0.liwp59u.mongodb.net/?retryWrites=true&w=majority"
+CLUSTER=""
 client = MongoClient(CLUSTER)
 
 print(client.list_database_names())

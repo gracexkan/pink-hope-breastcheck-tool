@@ -40,32 +40,43 @@ export default function Form() {
       </h1>
       <form style={{ width: "100%", paddingBottom: "30px" }}>
         <fieldset>
-          <Title level={4} style={{
-          color: "#73313b",
-          fontWeight: "bold",
-        }}>Select Tracker</Title>
+          <Title level={4}>Select Tracker</Title>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                display: "block",
+                textAlign: "left",
+                alignContent: "center",
+              }}
+            >
+              <input
+                type="radio"
+                id="period"
+                name="logger"
+                value="period"
+                checked={formData.logger === "period"}
+                onChange={handleChange}
+              />
+              <label htmlFor="period"> Period Tracker</label>
+              <br />
 
-          <input
-            type="radio"
-            id="period"
-            name="logger"
-            value="period"
-            checked={formData.logger === "period"}
-            onChange={handleChange}
-          />
-          <label htmlFor="period"> Period Tracker</label>
-          <br />
+              <input
+                type="radio"
+                id="self-check"
+                name="logger"
+                value="self-check"
+                checked={formData.logger === "self-check"}
+                onChange={handleChange}
+              />
+              <label htmlFor="self-check"> Self-Check Tracker</label>
+            </div>
+          </div>
 
-          <input
-            type="radio"
-            id="self-check"
-            name="logger"
-            value="self-check"
-            checked={formData.logger === "self-check"}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="self-check"> Self-Check Tracker</label>
           <br />
         </fieldset>
       </form>
